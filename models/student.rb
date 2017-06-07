@@ -13,6 +13,10 @@ class Student
     @age = options['age'].to_i
   end
 
+  def full_name()
+    return "#{@first_name} #{@last_name}"
+  end
+
   def save()
     sql = "INSERT INTO students ( first_name, last_name, house_id, age) VALUES ( '#{@first_name}', '#{@last_name}', #{@house_id}, #{@age}) RETURNING * ;"
     student = SqlRunner.run(sql)
@@ -27,16 +31,32 @@ class Student
   end
 
   def self.find(id)
-    sql = "SELECT * FROM student WHERE id = #{id} ;"
+    sql = "SELECT * FROM students WHERE id = #{id} ;"
     student = SqlRunner.run(sql)
-    result = Student.new(student.first)
+    result = Student.new(student.first())
     return result
   end
 
   def house()
     sql = "SELECT * FROM houses WHERE id = #{house_id} ;"
     result = SqlRunner.run(sql)
-    return House.new(result[0])
+    return House.new(result.first())
   end
+
+  def update(options)
+    sql = "UPDATE students SET
+    first_name = '#{options['first_name']}',
+    last_name = '#{options['last_name']}',
+    age = '#{options['age']}',
+    house_id = '#{options['house_id']}'
+    WHERE id = '#{options['id']}' ;"
+    SqlRunner.run(sql)
+  end
+
+  def delete()
+    sql = "DELETE FROM students WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
 
 end
