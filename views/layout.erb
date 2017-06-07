@@ -8,25 +8,20 @@
 </head>
 <body>
   <header>
-    <div class="grid">
-    <div class="grid-row">
-    <div class="cell"><img id="crest" src="https://s-media-cache-ak0.pinimg.com/originals/32/c8/80/32c8809cccbb67720c003b7ea53054f5.png" alt="Hogwarts Crest"></div>
-    <div class="cell"><p id="title">Hogwarts</p></div>
-    </div>
-    </div>
+    <div class="cell"><p id="title">Welcome to Hogwarts!</p></div>
   </header>
-  
+
   <main>
-  <%= yield %>
+    <%= yield %>
   </main>
 
   <footer>
-  <nav>
-    <ul>
-      <li><a href="/student/new">Join Hogwarts</a></li>
-      <li><a href="/students">View all students</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="/student/new">Join Hogwarts</a></li>
+        <li><a href="/students">View all students</a></li>
+      </ul>
+    </nav>
   </footer>
 </body>
 </html>

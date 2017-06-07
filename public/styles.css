@@ -2,16 +2,22 @@ body {
   background: #351431;
   color: #D4AF37;
   font-family: 'Cinzel', serif;
-  margin-left: 1.5em;
 }
 
 header {
-  : center;
+  background-image: url('http://az616578.vo.msecnd.net/files/2016/08/01/6360561629353435571471412419_The_Leaving_Feast_-_B4C37M1.png');
+  background-position: top center;
+  position: relative;        
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  text-align: center;
 }
 
 h1 {
   font-size: 4em;
-  margin: 2px;
+  margin: 20px;
 }
 
 a {
@@ -27,18 +33,9 @@ form {
   font-size: 2em;
 }
 
-input[value="Edit"] {
-  font-family: 'Cinzel', serif;
-}
 
-
-.grid {
-  border: 1px;
-}
-
-.grid-row {
-  display: flex;
-  flex-direction: row;
+.cell {
+  color: white;
 }
 
 #crest {
@@ -50,5 +47,9 @@ input[value="Edit"] {
   font-size: 5em;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 30px;
+}
+
+#main_hall {
+  display: inline-block;
+  width: 60em;
 }
