@@ -1,0 +1,54 @@
+body {
+  background: #351431;
+  color: #D4AF37;
+  font-family: 'Cinzel', serif;
+  margin-left: 1.5em;
+}
+
+header {
+  : center;
+}
+
+h1 {
+  font-size: 4em;
+  margin: 2px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 2em;
+}
+
+form {
+  font-size: 2em;
+}
+
+input[value="Edit"] {
+  font-family: 'Cinzel', serif;
+}
+
+
+.grid {
+  border: 1px;
+}
+
+.grid-row {
+  display: flex;
+  flex-direction: row;
+}
+
+#crest {
+  height: 15em;
+  display: inline-block;
+}
+
+#title {
+  font-size: 5em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+}

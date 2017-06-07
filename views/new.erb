@@ -1,21 +1,21 @@
 <form action="/students" method="post">
   
   <label for="first-name">First Name:</label>
-  <input type="text" id="first-name" name="first_name">
+  <input type="text" id="first-name" name="first_name"><br>
 
   <label for="last-name">Last Name:</label>
-  <input type="text" id="last-name" name="last_name">
+  <input type="text" id="last-name" name="last_name"><br>
 
   <label for="house-select">Select a House:</label>
   <select name="house_id" id="house-select">
     <%for house in @houses%>
       <option value="<%=house.id%>"><%=house.name()%></option>
     <%end%>
-  </select>
+  </select><br>
 
   <label for="age">Age:</label>
-  <input type="number" id="age" name="age">
+  <input type="number" id="age" name="age"><br>
 
-  <input type="submit" value="Join Hogwarts">
+  <input class="button" type="submit" value="Join Hogwarts"><br>
 
 </form>
